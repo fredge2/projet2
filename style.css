@@ -1,17 +1,13 @@
 /* couleur du fond*/
-body {
+html,body {
   background-color: #f2f2f2;
-}
-
-@font-face {
-  font-family: raleway;
-  src: url(raleway\ \(1\).zip);
+  font-family: 'Raleway', sans-serif;
 }
 
 
 
 h1 {
-  color: #0065FC;
+  color: #0065fc;
 }
 
 .sizeNav {
@@ -44,12 +40,14 @@ h1 {
   grid-gap: 10px;
 }
 
-.menu-container:hover {
-  border-bottom: 2px solid #0065FC;
+.menu-container {
+  height: 50px;
 }
 
-
-
+.menu-container:hover {
+  border-top: 2px solid #0065fc;
+  border-top: #0065fc;
+}
 
 .menu-item {
   text-decoration: none;
@@ -57,18 +55,18 @@ h1 {
 }
 
 .menu-item:hover {
-  color: #0065FC;
+  color: #0065fc;
+  padding: 20px;
 }
 
-
-.bordurenav {
+/* .bordurenav {
   border-top: 1px solid transparent;
   border-bottom: 3px solid lightgrey;
 }
 
 .bordurenav:hover {
   border-bottom: rgb(123, 20, 241);
-} 
+}
 
 .bordurenav2 {
   border-bottom: 3px solid lightgrey;
@@ -76,7 +74,7 @@ h1 {
 
 .bordurenav2:hover {
   border-bottom: 3px solid rgb(123, 20, 241);
-}
+} */
 
 .flexCenter {
   display: flex;
@@ -84,16 +82,17 @@ h1 {
   align-items: center;
 }
 
-
 /** Mise en page selection de la ville*/
 
 .search_text {
-  font-size: 27px;
+  font-size: 20px;
+  padding-left: 25px;
 }
 
 #searchWrapper {
   display: flex;
   justify-content: left;
+  padding-left: 25px;
 }
 
 #searchInput {
@@ -108,11 +107,25 @@ h1 {
 #searchButton {
   height: 40px;
   color: aliceblue;
-  background-color: #0065FC;
+  background-color: #0065fc;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   outline: 0px;
   border-width: 0px;
+}
+
+#searchButton2 {
+  height: 40px;
+  color: aliceblue;
+  background-color: #0065fc;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  outline: 0px;
+  border-width: 0px;
+}
+
+.searchButton2 {
+  display: none;
 }
 
 #searchIcon {
@@ -128,19 +141,18 @@ h1 {
 /** Mise en page des filtres*/
 
 .filtr {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 100%;
   margin-right: 5px;
 }
-
 
 #filtersContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   grid-gap: 2vw;
-  padding: 0 3em 0em 1em;
+  padding-left: 25px;
 }
 
 .filtersContainer__element:hover {
@@ -150,36 +162,35 @@ h1 {
   border: 2px solid gray;
   cursor: pointer;
   height: 50px;
-  box-shadow: 0 0 0 1px rgb(255, 249, 249);
+  box-shadow: 0 0 0 1px #f0ffff;
   transition: box-shadow 0.5s linear;
   display: flex;
   flex-wrap: wrap;
   margin-left: 50px;
-  background-color: yellowgreen;
+  background-color: #5dacdd;
 }
 
 .filtersContainer__element {
   border-radius: 70px;
   align-items: center;
 
-  border: 2px solid gray;
+  border: 2px solid #cfe3e8 ;
   cursor: pointer;
   box-shadow: 0 0 0 1px rgb(255, 249, 249);
   transition: box-shadow 0.5s linear;
   display: flex;
- 
 }
 
 .filtersContainer__element__icon:hover {
-  background-color: #30ce57;
+  background-color: #f0ffff;
 }
 
 .filtersContainer__element__icon {
-  color: #0065FC;
-  background-color: #cacfe2;
+  color: #0065fc;
+  background-color: #d6eff6;
   border-radius: 100%;
-  height: 3rem;
-  width: 3rem;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,13 +203,15 @@ h1 {
 }
 
 .filtersContainer__element__title:hover {
-  background-color: aquamarine;
+  background-color: #a2c2e5;
 }
 /**Mise en page résultats de recherche*/
 
 #resultats {
   display: flex;
   align-items: center;
+  padding-left: 25px;
+  margin-top: 35px;
 }
 .circle {
   border: solid 1px;
@@ -214,12 +227,11 @@ h1 {
   font-size: 20px;
 }
 
-
 #locationSection {
   margin: 40px 0px;
   display: flex;
   justify-content: space-evenly;
-  flex: wrap;
+  flex-wrap: wrap;
 }
 
 .greyWrapper {
@@ -237,21 +249,23 @@ h1 {
 #boxLeft {
   width: 60%;
   position: relative;
-  
+  margin-right: 5px;
+  height: 650px;
 }
 
 #plusde {
   position: absolute;
   bottom: 30px;
   left: 30px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 100%;
 }
 
 #boxRight {
-  width: 35%;
-  height: 700px;
+  width: 30%;
+  height: 650px;
+  margin-left: 5px;
 }
 
 #tittlewrapper2 {
@@ -281,10 +295,13 @@ h1 {
   color: black;
 }
 
-.hebergements2 , .activite2 , .search_tittle {
-  font-size: 30px;
+.hebergements2,
+.activite2,
+.search_tittle {
+  font-size: 23px;
   font-weight: bold;
   line-height: 100%;
+  padding-left: 25px;
 }
 
 .cardImage {
@@ -292,25 +309,27 @@ h1 {
   height: 100px;
   border-radius: 15px 15px 0 0;
   padding: 3px;
+  object-fit: cover;
 }
 
 .verticalCard {
-  margin: 10px 0px;
+  margin: 20px 0px;
   box-shadow: 5px 5px 5px gray;
   width: 30%;
-  height: 210px;
+  height: 195px;
   line-height: 60%;
   position: relative;
   border-radius: 15px 15px 15px 15px;
+  background-color: white;
 }
 
 .texte {
   margin-top: 10px;
+  font-size: 14px;
 }
 
-
 .TitleV {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 100%;
 }
@@ -319,6 +338,7 @@ h1 {
   padding: 10px;
   position: absolute;
   bottom: 0;
+  font-size: 80%;
 }
 
 .description {
@@ -326,7 +346,7 @@ h1 {
 }
 
 .blue {
-  color : #0065FC;
+  color: #0065fc;
 }
 
 .grey {
@@ -343,35 +363,39 @@ h1 {
 }
 
 .Box {
-  margin: 10px 0px;
+  margin: 20px 0px 20px 15px;
   box-shadow: 5px 5px 5px gray;
-  width: 95%;
-  height: 160px;
-  border-radius: 8px;
+  width: 87%;
+  height: 135px;
+  border-radius: 15px;
   padding: 3px;
   position: relative;
+  background-color: white
 }
 
 .SBoxText {
   padding: 12px;
   line-height: 60%;
+  font-size: 14px;
 }
 
 .SBoxPart {
   display: flex;
-  margin: none;
+  margin: 0px;
   padding-left: 5px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .BoxImg {
   width: 130px;
-  height: 149px;
+  height: 124px;
   border-radius: 15px 0 0 15px;
   padding: 3px;
+  object-fit: cover;
 }
 
 .titleSBT {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bold;
   line-height: 100%;
 }
@@ -381,6 +405,7 @@ h1 {
   height: auto;
   position: absolute;
   bottom: 0;
+  font-size: 80%;
 }
 
 #ActivitePart {
@@ -389,6 +414,7 @@ h1 {
   justify-content: space-around;
   position: relative;
 }
+
 
 .ActItem {
   width: 22%;
@@ -406,8 +432,8 @@ h1 {
   width: 100%;
   height: 360px;
   border-radius: 11px 11px 0px 0px;
+  object-fit: cover;
 }
-
 
 .ActText {
   font-size: 20px;
@@ -423,6 +449,7 @@ h1 {
   box-shadow: 5px 5px 5px gray;
   border-radius: 11px;
   height: 210px;
+  background-color: white;
 }
 
 .ActItemTyp2 {
@@ -431,26 +458,29 @@ h1 {
   box-shadow: 5px 5px 5px gray;
   border-radius: 11px;
   height: 160px;
+  background-color: white;
 }
 
 .ActIImag2 {
   width: 100%;
   height: 150px;
   border-radius: 11px 11px 0px 0px;
+  object-fit: cover;
 }
 
 .ActIImag3 {
   width: 100%;
   height: 100px;
   border-radius: 11px 11px 0px 0px;
+  object-fit: cover;
 }
-
 
 .ActItemTyp3 {
   width: 100%;
   box-shadow: 5px 5px 5px gray;
   border-radius: 11px;
   height: 180px;
+  background-color: white;
 }
 
 .ActItemTyp4 {
@@ -459,20 +489,27 @@ h1 {
   box-shadow: 5px 5px 5px gray;
   border-radius: 11px;
   height: 200px;
+  background-color: white;
 }
 
 .ActIImag4 {
   width: 100%;
   height: 120px;
   border-radius: 11px 11px 0px 0px;
+  object-fit: cover;
 }
 
 .ActIImag5 {
   width: 100%;
   height: 140px;
   border-radius: 11px 11px 0px 0px;
+  object-fit: cover;
 }
-.A,.ActItemTyp1,.ActItemTyp2,.ActItemTyp3,.ActItemTyp4 {
+.A,
+.ActItemTyp1,
+.ActItemTyp2,
+.ActItemTyp3,
+.ActItemTyp4 {
   position: relative;
   box-shadow: 5px 5px 5px gray;
   border-radius: 11px;
@@ -485,10 +522,7 @@ h1 {
   font-weight: bold;
   line-height: 100%;
 }
-footer {
-  position :absolute
-  bottom:0
-}
+
 
 .FootNav {
   display: flex;
@@ -503,31 +537,31 @@ footer {
 }
 
 
-/** media quieries 992*/
+/** media quieries 991*/
 
-@media screen and (max-width: 992px) {
 
+@media screen and (max-width: 991px) {
   .filtr {
     width: 100%;
   }
   #boxLeft {
     width: 100vw;
+    height: unset;
   }
 
   #boxRight {
     width: 100vw;
-    height:390px;
+    height: unset;
   }
 
   .BoxImg {
     width: 100%;
     height: 120px;
     border-radius: 15px 15px 0 0;
-    padding-top: 3px;
+    padding-top: 0px;
   }
 
   #filtersContainer {
-    
     display: flex;
     flex-wrap: wrap;
   }
@@ -538,9 +572,7 @@ footer {
     padding-right: 20px;
   }
 
-  .filtersContainer__element__icon {
-    align-items: left;
-  }
+
 
   #locationSection {
     flex-direction: column-reverse;
@@ -564,7 +596,8 @@ footer {
   }
 
   .Appreciation2 {
-    position: bottom;
+    position: absolute;
+    bottom: 0;
   }
 
   #ActivitePart {
@@ -591,15 +624,14 @@ footer {
     line-height: 100%;
   }
 
-}
+
+/** media quieries 767*/
 
 
-/** media quieries 768*/
-
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 767px) {
   .headerForm {
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
   .sizeNav {
@@ -612,22 +644,23 @@ footer {
   #stylbooki {
     display: flex;
     justify-content: center;
-}
+  }
 
   .logo {
-      width: 120px;
-      height: 70px;
-      margin-bottom: 8px;
-      object-fit: cover;}
+    width: 120px;
+    height: 70px;
+    margin-bottom: 8px;
+    object-fit: cover;
+  }
 
   #boxhead {
     width: unset;
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: solid grey;
+    border-bottom: solid #e2ebf7;
   }
-    
+
   .menu-container {
     display: flex;
     padding: 0px;
@@ -635,7 +668,9 @@ footer {
   }
 
   .menu-container:hover {
-    border-bottom : #0065FC 3px solid
+    border-bottom: #0065fc 3px solid;
+    border-top: unset;
+    padding: unset;
   }
 
   .menu-item {
@@ -644,16 +679,28 @@ footer {
     text-decoration: none;
     width: 40vw;
     text-align: center;
-
   }
 
   .menu-item:hover {
-    color: #0065FC;
+    color: #0065fc;
   }
-  
 
-  #searchWrapper{
+  #searchWrapper {
     justify-content: center;
+    padding-left: unset;
+  }
+
+  .searchButton {
+    display: none;
+    height: unset;
+    width: unset;
+  }
+
+  .searchButton2 {
+    display: unset;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 50px;
   }
 
   #plusde {
@@ -684,28 +731,28 @@ footer {
   }
 
   .SBoxText {
-    padding: 12px;
-    line-height: 60%;
+    padding: 6px;
+    line-height: 100%;
   }
 
   .SBoxPart {
     display: flex;
-    margin: none;
-    padding-left: 12px;
+    margin: 0px;
+    padding-left: 4px;
   }
 
   .BoxImg {
-    width: 180px;
+    width: 45vw;
     height: 149px;
     border-radius: 30px 0 0 30px;
-    padding: 3px;
+    padding: 2px;
   }
 
   .titleSBT {
     font-size: 20px;
     font-weight: bold;
     line-height: 100%;
-    padding-left: 12px;
+    padding-left: 6px;
   }
 
   .Appreciation2 {
@@ -778,8 +825,7 @@ footer {
   }
 
   .footbox {
+    width: unset;
+    padding: 20px;
   }
 }
-
-
-
